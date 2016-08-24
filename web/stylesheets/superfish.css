@@ -40,7 +40,7 @@
 .responsiveSelectFullMenu li {
 	display:block;
 
-	background:url(../main-menu-li-bg.jpg) no-repeat left top;
+	background:url(../images/main-menu-li-bg.jpg) no-repeat left top;
 	line-height:60px;
 	padding:0;
 }
@@ -58,7 +58,7 @@
 .responsiveSelectFullMenu li.sfHover a,
 .responsiveSelectFullMenu li.current-menu-parent a {
 	color:#8a6da7;
-	background:url(../main-menu-li-a-bg.png) no-repeat top center;
+	background:url(../images/main-menu-li-a-bg.png) no-repeat top center;
 }
 
 .responsiveSelectFullMenu li.bg-none {
@@ -78,7 +78,7 @@
 }
 .responsiveSelectFullMenu li.main-menu-home-logo {
 	background:none;
-	background:url(../home-logo.png) no-repeat;
+	background:url(../images/home-logo.png) no-repeat;
 	width:88px;
 	height:81px;
 	text-indent:-999px;
@@ -133,7 +133,7 @@
 .responsiveSelectFullMenu li.current-menu-item li a:hover,
 .responsiveSelectFullMenu li li.current-menu-item a {
 	color:#8a6da7;
-	background:url(../main-menu-li-a-bg.png) no-repeat top center;
+	background:url(../images/main-menu-li-a-bg.png) no-repeat top center;
 }
 
 
@@ -273,12 +273,12 @@
 	a.collapse span.toggle-image {
 		width:25px;
 		height:51px;
-		background: url(toggle.png) no-repeat right top;
+		background: url(../images/toggle.png) no-repeat right top;
 	}
 	a.expand span.toggle-image {
 		width:25px;
 		height:51px;
-		background: url(toggle.png) no-repeat right bottom;
+		background: url(../images/toggle.png) no-repeat right bottom;
 	}
 
 }
