@@ -1,6 +1,7 @@
 <?php
 
 require('../vendor/autoload.php');
+	
 
 $app = new Silex\Application();
 $app['debug'] = true;
@@ -31,7 +32,10 @@ $app->get('/tumbling-classes', function() use($app) {
   return $app['twig']->render('tumbling-classes.twig');
 });
 
-
+$app->get('/about', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('about.twig');
+});
 $app->get('/trampoline-classes', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('trampoline-classes.twig');

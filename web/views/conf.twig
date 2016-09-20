@@ -1,0 +1,14 @@
+{% 
+	set config = new stdClass();
+	config->bucket_slug = "infinitebound"; // bucket slug
+	config->read_key = "DurWsN72RuS5Jd2AExOdvqVDQNGv1jBY0aHexPvXCjiNhwqFUL"; // leave empty if not required
+	config->write_key = "8u5THNrcyi4lWoYPsV67HkAShlyWdAEuSPS30gZiZJjTJn7BUa"; // leave empty if not required
+
+	config->url = "https://api.cosmicjs.com/v1/" . config->bucket_slug;
+	config->objects_url = config->url . "/objects";
+	config->media_url = config->url . "/media";
+	config->add_object_url = config->url . "/add-object";
+	config->edit_object_url = config->url . "/edit-object";
+	config->delete_object_url = config->url . "/delete-object";
+	
+%}

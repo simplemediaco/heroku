@@ -12,3 +12,30 @@
     
 </div></div></div>
 <div class="copyright">&copy; Copyright 2013 &nbsp;|&nbsp; <a href="http://infinitebounds.com/wp-content/plugins/really-static/static/terms-and-conditions">Privacy</a> &nbsp;|&nbsp; Site Designed and Developed by <a href="http://simplemedia.co">Simple Media</a></div>
+
+<script>
+var config = {};
+config.bucket = {
+  slug: 'infinitebound',
+  read_key: 'DurWsN72RuS5Jd2AExOdvqVDQNGv1jBY0aHexPvXCjiNhwqFUL', // add read_key if added to your Cosmic JS bucket settings
+  write_key: '8u5THNrcyi4lWoYPsV67HkAShlyWdAEuSPS30gZiZJjTJn7BUa' // add write_key if added to your Cosmic JS bucket settings
+},
+config.object= {
+      slug: gslug
+    };
+
+
+  Cosmic.getObject(config, config.object, function(err, res) {
+    var object = res.object;
+    document.getElementById('title').innerHTML = object.title;
+    document.getElementById('content').innerHTML = object.content;
+    var metafields = object.metafields;
+    var images = '';
+    metafields.forEach(function(metafield) {
+      images += '<h2>' + metafield.title + '</h2>';
+      images += '<img width="300" src="' + metafield.imgix_url + '?w=500"/>';
+      images += '<br><br>';
+    })
+    document.getElementById('metafields').innerHTML = images;
+  });
+</script>
