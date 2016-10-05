@@ -1,8 +1,28 @@
 <?php
 
 require('../vendor/autoload.php');
-	
+if(isset($_REQUEST['submit']))
+{
+	echo $_REQUEST['name'];
+	exit();
+}
+$config = new stdClass();
+$config->bucket_slug = "infinitebound"; // bucket slug
+$config->object_slug = 'sbirthday-parties';
+$config->object_type = 'sliders';
+$config->read_key = "DurWsN72RuS5Jd2AExOdvqVDQNGv1jBY0aHexPvXCjiNhwqFUL"; // leave empty if not required
+$config->write_key = "8u5THNrcyi4lWoYPsV67HkAShlyWdAEuSPS30gZiZJjTJn7BUa"; // leave empty if not required
 
+$config->url = "https://api.cosmicjs.com/v1/" . $config->bucket_slug;
+$config->objurl = "https://api.cosmicjs.com/v1/".$config->bucket_slug."/object-type/";
+https://api.cosmicjs.com/v1/infinitebound/object-type/sliders?pretty=true
+$config->objects_url = $config->url . "/objects";
+$config->media_url = $config->url . "/media";
+$config->add_object_url = $config->url . "/add-object";
+$config->edit_object_url = $config->url . "/edit-object";
+$config->delete_object_url = $config->url . "/delete-object";
+
+include("cosmicjs.php");
 $app = new Silex\Application();
 $app['debug'] = true;
 
@@ -25,6 +45,11 @@ $app->get('/', function() use($app) {
 $app->get('/competitive-tumbling', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('competitive-tumbling.twig');
+});
+
+$app->get('/tumbling-classes', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('tumbling-classes.twig');
 });
 
 $app->get('/tumbling-classes', function() use($app) {
@@ -79,6 +104,7 @@ $app->get('/dance', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('dance.twig');
 });
+
 $app->get('/impact-america-martial-arts', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('impact-america-martial-arts.twig');
@@ -101,6 +127,7 @@ $app->get('/leasing-options', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('leasing-options.twig');
 });
+
 $app->get('/camps', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('camps.twig');
@@ -110,13 +137,20 @@ $app->get('/schedule', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('schedule.twig');
 });
-$app->get('/forms', function() use($app) {
-  $app['monolog']->addDebug('logging output.');
-  return $app['twig']->render('forms.twig');
-});
 $app->get('/contact', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('contact.twig');
 });
+$app->get('/privacy', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('privacy.twig');
+});
+
+$app->get('/forms', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('forms.twig');
+});
+
+
 
 $app->run();

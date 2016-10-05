@@ -4,27 +4,33 @@
 
 			<div id="text-6" class="widget-container widget_text"><h3 class="widget-title">SIGN IN &#038; GET A FREE CLASS TODAY!</h3>			<div class="textwidget"><div role="form" class="wpcf7" id="wpcf7-f4-o1" dir="ltr">
 <div class="screen-reader-response"></div>
-<form action="/#wpcf7-f4-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-<div style="display: none;">
-<input type="hidden" name="_wpcf7" value="4" />
-<input type="hidden" name="_wpcf7_version" value="4.4.2" />
-<input type="hidden" name="_wpcf7_locale" value="" />
-<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f4-o1" />
-<input type="hidden" name="_wpnonce" value="80b1ab1b73" />
-</div>
+<form action="http://localhost/cosmicjs-live/web/" method="get" class="wpcf7-form" novalidate="novalidate">
 <div class="receive">Sign in & we will get you started! <span></span></div>
-<div class="input-field"><span class="wpcf7-form-control-wrap text-10"><input type="text" name="text-10" value="NAME" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span></div>
-<div class="input-field"><span class="wpcf7-form-control-wrap text-11"><input type="text" name="text-11" value="PHONE" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span></div>
-<div class="input-field"><span class="wpcf7-form-control-wrap email-779"><input type="email" name="email-779" value="EMAIL" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" /></span></div>
-<div class="receive"><input type="hidden" name="_wpcf7_captcha_challenge_captcha-657" value="4023814519" /><img class="wpcf7-form-control wpcf7-captchac wpcf7-captcha-captcha-657" width="72" height="24" alt="captcha" src="http://infinitebounds.com/wp-content/plugins/really-static/static/wp-content/uploads/wpcf7_captcha/4023814519.png" /></div>
-<div class="input-field"><span class="wpcf7-form-control-wrap captcha-657"><input type="text" name="captcha-657" value="" size="40" class="wpcf7-form-control wpcf7-captchar" aria-invalid="false" /></span></div>
-<div class="input-submit"><input type="submit" value="SUBMIT" class="wpcf7-form-control wpcf7-submit" /></div>
+<div class="input-field"><span class="wpcf7-form-control-wrap text-10">
+<input type="text" required="required" name="name" value="NAME" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span></div>
+<div class="input-field"><span class="wpcf7-form-control-wrap text-11">
+<input type="text" name="phone" required="required" value="PHONE" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span></div>
+
+<div class="input-field"><span class="wpcf7-form-control-wrap email-779">
+
+<input type="email" name="email" required="required" value="EMAIL" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" /></span></div>
+
+
+<div class="input-submit"><input type="submit" name="submit" value="SUBMIT" class="wpcf7-form-control wpcf7-submit" /></div>
 <div class="wpcf7-response-output wpcf7-display-none"></div></form></div></div>
-		</div><div id="text-7" class="widget-container widget_text"><h3 class="widget-title">Open Gym Every Saturday!</h3>			<div class="textwidget"><p>Get your jump on this Saturday!  Meet your tumbling friends up at IB or meet new ones!  Practice doesn't make perfect...perfect practice does!  Jump 4 Fun starts at 7:00 - 10:00...see you then!</p>
+		</div>
+		
+		
+		<div id="text-7" class="widget-container widget_text"><h3 class="widget-title" id="widget-1-title"></h3>			<div class="textwidget" id="widget-1">
 </div>
-		</div><div id="text-8" class="widget-container widget_text"><h3 class="widget-title">It&#8217;s Time To Get Serious!</h3>			<div class="textwidget"><p>Cheer tryouts has come and gone but it isn't to late to start practicing your tumbling so that when cheer tryouts comes around the corner...YOU ARE READY!  It takes time to learn the skills needed to succeed in cheer leading and now is the time to get started!  Sign up today for our awesome tumbling classes!  </p>
+		</div>
+		
+		<div id="text-8" class="widget-container widget_text"><h3 class="widget-title"  id="widget-2-title" ></h3>			<div class="textwidget"  id="widget-2">
 </div>
-		</div><div id="text-9" class="widget-container widget_text"><h3 class="widget-title">It&#8217;s All Most Over!</h3>			<div class="textwidget"><p>IB Summer Camp is all most over but you have one more week to have some fun before school starts!  Come on in.    August 15th - 19th - times are 9:00 am - 2:00 pm and Stay N Play is 2:00 pm to 5:00 pm!</p>
+		</div>
+		
+		
+		<div id="text-9" class="widget-container widget_text"><h3 class="widget-title"   id="widget-3-title"></h3>			<div class="textwidget"  id="widget-3">
 </div>
 		</div>            </div>
 
@@ -35,3 +41,60 @@
 			                        </div>
 
 		</div><!-- #sidebar -->
+		<script>
+var config = {};
+config.bucket = {
+  slug: 'infinitebound',
+  read_key: 'DurWsN72RuS5Jd2AExOdvqVDQNGv1jBY0aHexPvXCjiNhwqFUL', // add read_key if added to your Cosmic JS bucket settings
+  write_key: '8u5THNrcyi4lWoYPsV67HkAShlyWdAEuSPS30gZiZJjTJn7BUa' // add write_key if added to your Cosmic JS bucket settings
+},
+config.object= {
+      slug: 'open-gym-every-saturday'
+    };
+
+
+  Cosmic.getObject(config, config.object, function(err, res) {
+    var object = res.object;
+    document.getElementById('widget-1-title').innerHTML = object.title;
+    document.getElementById('widget-1').innerHTML = object.content;
+ 
+  });
+</script>
+	<script>
+var config = {};
+config.bucket = {
+  slug: 'infinitebound',
+  read_key: 'DurWsN72RuS5Jd2AExOdvqVDQNGv1jBY0aHexPvXCjiNhwqFUL', // add read_key if added to your Cosmic JS bucket settings
+  write_key: '8u5THNrcyi4lWoYPsV67HkAShlyWdAEuSPS30gZiZJjTJn7BUa' // add write_key if added to your Cosmic JS bucket settings
+},
+config.object= {
+      slug: 'its-time-to-get-serious'
+    };
+
+
+  Cosmic.getObject(config, config.object, function(err, res) {
+    var object = res.object;
+    document.getElementById('widget-2-title').innerHTML = object.title;
+    document.getElementById('widget-2').innerHTML = object.content;
+ 
+  });
+</script>
+	<script>
+var config = {};
+config.bucket = {
+  slug: 'infinitebound',
+  read_key: 'DurWsN72RuS5Jd2AExOdvqVDQNGv1jBY0aHexPvXCjiNhwqFUL', // add read_key if added to your Cosmic JS bucket settings
+  write_key: '8u5THNrcyi4lWoYPsV67HkAShlyWdAEuSPS30gZiZJjTJn7BUa' // add write_key if added to your Cosmic JS bucket settings
+},
+config.object= {
+      slug: 'its-all-most-over'
+    };
+
+
+  Cosmic.getObject(config, config.object, function(err, res) {
+    var object = res.object;
+    document.getElementById('widget-3-title').innerHTML = object.title;
+    document.getElementById('widget-3').innerHTML = object.content;
+ 
+  });
+</script>

@@ -12,6 +12,7 @@ class CosmicJS {
     $this->config->read_key = $config->read_key;
     $this->config->write_key = $config->write_key;
     $this->config->url = "https://api.cosmicjs.com/v1/" . $this->config->bucket_slug;
+	$config->objurl    =  "https://api.cosmicjs.com/v1/". $this->config->bucket_slug . "/object-type/". $this->config->object_type. "?read_key=" . $this->config->read_key;
     $this->config->objects_url = $this->config->url . "/objects?read_key=" . $this->config->read_key;
     $this->config->object_url = $this->config->url . "/object/" . $this->config->object_slug . "?read_key=" . $this->config->read_key;
     $this->config->media_url = $this->config->url . "/media?read_key=" . $this->config->read_key;
@@ -21,12 +22,20 @@ class CosmicJS {
   }
   // Get all objects
   public function getObjects(){
+	//  echo $this->config->objects_url;
+
     $data = json_decode($this->curl->get($this->config->objects_url));
+    return $data;
+  }
+  
+   public function getObjectType(){
+	//  echo $this->config->objects_url;
+
+    $data = json_decode($this->curl->get($this->config->objurl));
     return $data;
   }
   // Get all object
   public function getObject(){
-	  echo $this->config->object_url;
     $data = json_decode($this->curl->get($this->config->object_url));
     return $data;
   }
