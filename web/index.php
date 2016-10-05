@@ -3,7 +3,7 @@ $msg = '';
 require('../vendor/autoload.php');
 if(isset($_REQUEST['submit']))
 {
-	echo $_REQUEST['name'];
+	
 $msg = "Name:".$_REQUEST['name'];
 $msg .= "Name:".$_REQUEST['phone'];
 $msg .= "Name:".$_REQUEST['email'];
