@@ -1,10 +1,27 @@
 <?php
-
+$msg = '';
 require('../vendor/autoload.php');
 if(isset($_REQUEST['submit']))
 {
 	echo $_REQUEST['name'];
-	exit();
+$msg = "Name:".$_REQUEST['name'];
+$msg .= "Name:".$_REQUEST['phone'];
+$msg .= "Name:".$_REQUEST['email'];
+
+// use wordwrap() if lines are longer than 70 characters
+$msg = wordwrap($msg,70);
+
+// send email
+if(mail("hadden@simplemedia.co","Contact Email",$msg))
+{
+?>
+<script type="text/javascript">
+alert("Email Sent Successfully");
+
+</script>
+<?php } 
+
+$msg = "Email Sent Successfully.";
 }
 $config = new stdClass();
 $config->bucket_slug = "infinitebound"; // bucket slug
