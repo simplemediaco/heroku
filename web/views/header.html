@@ -1,4 +1,22 @@
-<title>PHP Getting Started on Heroku</title>
+<script>
+var config = {};
+config.bucket = {
+  slug: 'infinitebound',
+  read_key: 'DurWsN72RuS5Jd2AExOdvqVDQNGv1jBY0aHexPvXCjiNhwqFUL', // add read_key if added to your Cosmic JS bucket settings
+  write_key: '8u5THNrcyi4lWoYPsV67HkAShlyWdAEuSPS30gZiZJjTJn7BUa' // add write_key if added to your Cosmic JS bucket settings
+},
+config.object= {
+      slug: 'header-footer'
+    };
+
+  Cosmic.getObject(config, config.object, function(err, res) {
+    var object = res.object;
+	document.write(object.content);
+	
+  
+ 
+  });
+</script>
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
