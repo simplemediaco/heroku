@@ -68,6 +68,10 @@ $app->get('/tumbling-classes', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('tumbling-classes.twig');
 });
+$app->get('/private-cheer', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('private-cheer.twig');
+});
 
 $app->get('/tumbling-classes', function() use($app) {
   $app['monolog']->addDebug('logging output.');
