@@ -171,7 +171,11 @@ $app->get('/forms', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('forms.twig');
 });
-
-
-
+$url = apache_getenv("HTTP_HOST") . apache_getenv("REQUEST_URI");
+echo apache_getenv("REQUEST_URI");
+$sl =explode("/",$url);
+$app->get($sl[3], function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('page.twig');
+});
 $app->run();
