@@ -172,6 +172,14 @@ $app->get('/forms', function() use($app) {
   return $app['twig']->render('forms.twig');
 });
 
+$slu =  $_SERVER['REQUEST_URI'];
 
+//$sl =explode("/",$url);
+
+
+$app->get($slu, function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('page.twig');
+});
 
 $app->run();
