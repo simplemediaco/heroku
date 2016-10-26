@@ -28,45 +28,32 @@
 	</div><!-- #header -->
 	  <div class="main-menu-bg"><div class="main-menu-left"><div class="main-menu-right">
         <a id="nav-toggle" class="collapse" href="#"><span>Menu</span><span class="toggle-image"></span></a>
-	<div id="main-menu" class="main-menu responsiveSelectContainer"><ul id="menu-main-menu-1" class="menu responsiveSelectFullMenu"><li class="bg-none menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-158"><a href="#">Tumbling</a>
-<ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154"><a href="tumbling-classes">Tumbling Classes</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153"><a href="competitive-tumbling">Competitive Tumbling</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-195"><a href="#">Trampoline</a>
-<ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197"><a href="trampoline-classes">Trampoline Classes</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-196"><a href="competitive-trampoline">Competitive Trampoline</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-183"><a href="#">Gymnastics</a>
-<ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-185"><a href="gymnastics-classes">Gymnastics Classes</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-184"><a href="competitive-gymnastics">Competitive Gymnastics</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-173"><a href="#">Cheerleading</a>
-<ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-175"><a href="cheerleading-classes">Cheerleading Classes</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a href="competitive-cheerleading">Competitive Cheerleading</a></li>
-</ul>
-</li>
-<li class="main-menu-home-logo menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-28 current_page_item menu-item-30"><a href="/">#28 (no title)</a></li>
-<li class="bg-none pre menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="preschool-activities">Preschool Activities</a></li>
-<li class="pre menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="birthday-parties">Birthday Parties</a></li>
-<li class="pre menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a href="jump-for-fun">Jump for Fun</a></li>
-<li class="pre menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-117"><a href="#">Additional Programs</a>
-<ul class="sub-menu">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="dance">Dance</a></li>
-	<li class="pre menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="impact-america-martial-arts">Impact America Martial Arts</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="rhythmic">Rhythmic</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203"><a href="homeschool-programs">Homeschool Programs</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a href="fundraisers">Fundraisers</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-205"><a href="leasing-options">Leasing Options</a></li>
-</ul>
-</li>
-</ul><select class="responsiveMenuSelect"><option value="" selected="selected">⇒ Navigate</option>	<option  id="menu-item-154" value="tumbling-classes">– Tumbling Classes</option>
+			<script>
+var config = {};
+config.bucket = {
+  slug: 'infinitebound',
+  read_key: 'DurWsN72RuS5Jd2AExOdvqVDQNGv1jBY0aHexPvXCjiNhwqFUL', // add read_key if added to your Cosmic JS bucket settings
+  write_key: '8u5THNrcyi4lWoYPsV67HkAShlyWdAEuSPS30gZiZJjTJn7BUa' // add write_key if added to your Cosmic JS bucket settings
+},
+config.object= {
+      slug: 'menu'
+    };
+
+
+  Cosmic.getObject(config, config.object, function(err, res) {
+    var object = res.object;
+ 
+    document.getElementById('main-menu').innerHTML = object.content;
+ 
+  });
+</script>
+	<div id="main-menu" class="dss main-menu responsiveSelectContainer">
+	
+
+
+
+
+<select class="responsiveMenuSelect"><option value="" selected="selected">⇒ Navigate</option>	<option  id="menu-item-154" value="tumbling-classes">– Tumbling Classes</option>
 	<option  id="menu-item-153" value="competitive-tumbling">– Competitive Tumbling</option>
 	<option  id="menu-item-197" value="trampoline-classes">– Trampoline Classes</option>
 	<option  id="menu-item-196" value="competitive-trampoline">– Competitive Trampoline</option>
