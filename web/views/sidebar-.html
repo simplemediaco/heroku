@@ -1,0 +1,100 @@
+<div id="sidebar">
+
+        	<div class="secondary-sidebar">
+
+			<div id="text-6" class="widget-container widget_text"><h3 class="widget-title">SIGN IN &#038; GET A FREE CLASS TODAY!</h3>			<div class="textwidget"><div role="form" class="wpcf7" id="wpcf7-f4-o1" dir="ltr">
+<div class="screen-reader-response" id="msg"></div>
+<form action="http://infinitebound.cosmicapp.co/" method="get" class="wpcf7-form11">
+<div class="receive">Sign in & we will get you started! <span></span></div>
+<div class="input-field"><span class="wpcf7-form-control-wrap text-10">
+<input type="text" required="required" name="name" placeholder="NAME" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span></div>
+<div class="input-field"><span class="wpcf7-form-control-wrap text-11">
+<input type="text" name="phone" required="required" placeholder="PHONE" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span></div>
+
+<div class="input-field"><span class="wpcf7-form-control-wrap email-779">
+
+<input type="email" name="email" required="required" placeholder="EMAIL" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" /></span></div>
+
+
+<div class="input-submit"><input type="submit" name="submit" value="SUBMIT" class="wpcf7-form-control wpcf7-submit" /></div>
+<div class="wpcf7-response-output wpcf7-display-none"></div></form></div></div>
+		</div>
+		
+		
+		<div id="text-7" class="widget-container widget_text"><h3 class="widget-title" id="widget-1-title"></h3>			<div class="textwidget" id="widget-1">
+</div>
+		</div>
+		
+		<div id="text-8" class="widget-container widget_text"><h3 class="widget-title"  id="widget-2-title" ></h3>			<div class="textwidget"  id="widget-2">
+</div>
+		</div>
+		
+		
+		<div id="text-9" class="widget-container widget_text"><h3 class="widget-title"   id="widget-3-title"></h3>			<div class="textwidget"  id="widget-3">
+</div>
+		</div>            </div>
+
+            
+
+        	<div class="primary-sidebar">
+
+			                        </div>
+
+		</div><!-- #sidebar -->
+		<script>
+var config = {};
+config.bucket = {
+  slug: 'infinitebound',
+  read_key: 'DurWsN72RuS5Jd2AExOdvqVDQNGv1jBY0aHexPvXCjiNhwqFUL', // add read_key if added to your Cosmic JS bucket settings
+  write_key: '8u5THNrcyi4lWoYPsV67HkAShlyWdAEuSPS30gZiZJjTJn7BUa' // add write_key if added to your Cosmic JS bucket settings
+},
+config.object= {
+      slug: 'open-gym-every-saturday'
+    };
+
+
+  Cosmic.getObject(config, config.object, function(err, res) {
+    var object = res.object;
+    document.getElementById('widget-1-title').innerHTML = object.title;
+    document.getElementById('widget-1').innerHTML = object.content;
+ 
+  });
+</script>
+	<script>
+var config = {};
+config.bucket = {
+  slug: 'infinitebound',
+  read_key: 'DurWsN72RuS5Jd2AExOdvqVDQNGv1jBY0aHexPvXCjiNhwqFUL', // add read_key if added to your Cosmic JS bucket settings
+  write_key: '8u5THNrcyi4lWoYPsV67HkAShlyWdAEuSPS30gZiZJjTJn7BUa' // add write_key if added to your Cosmic JS bucket settings
+},
+config.object= {
+      slug: 'its-time-to-get-serious'
+    };
+
+
+  Cosmic.getObject(config, config.object, function(err, res) {
+    var object = res.object;
+    document.getElementById('widget-2-title').innerHTML = object.title;
+    document.getElementById('widget-2').innerHTML = object.content;
+ 
+  });
+</script>
+	<script>
+var config = {};
+config.bucket = {
+  slug: 'infinitebound',
+  read_key: 'DurWsN72RuS5Jd2AExOdvqVDQNGv1jBY0aHexPvXCjiNhwqFUL', // add read_key if added to your Cosmic JS bucket settings
+  write_key: '8u5THNrcyi4lWoYPsV67HkAShlyWdAEuSPS30gZiZJjTJn7BUa' // add write_key if added to your Cosmic JS bucket settings
+},
+config.object= {
+      slug: 'its-all-most-over'
+    };
+
+
+  Cosmic.getObject(config, config.object, function(err, res) {
+    var object = res.object;
+    document.getElementById('widget-3-title').innerHTML = object.title;
+    document.getElementById('widget-3').innerHTML = object.content;
+ 
+  });
+</script>
